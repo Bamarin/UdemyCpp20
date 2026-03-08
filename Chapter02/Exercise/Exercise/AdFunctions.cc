@@ -17,7 +17,7 @@ Types::VehicleType Data::init_ego_vehicle()
 {
     Types::VehicleType ego =
     {
-        .Id = -1,
+        .Id = Constants::EGO_VEHICLE_ID,
         .Lane = Types::LaneAssociationType::Center,
         .Speed = Utils::kph_to_mps(135)
     };
