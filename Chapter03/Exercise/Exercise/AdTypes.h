@@ -1,33 +1,36 @@
 #pragma once
 
 #include <cstdint>
+#include <array>
 
 #include "AdConstants.h"
 
-namespace Ad
-{
-namespace Types
+using namespace Ad::Constants;
+
+namespace Ad::Types
 {
 
-enum class LaneAssociationType
-{
-    LEFT,
-    CENTER,
-    RIGHT,
-    NONE,
-};
+    enum class LaneAssociationType
+    {
+        Unknown,
+        Left,
+        Center,
+        Right
+    };
 
-struct VehicleType
-{
-    std::int32_t id;
-    LaneAssociationType lane;
-    float speed_mps;
-    float distance_m;
-};
+    struct VehicleType
+    {
+        std::int32_t Id;
+        LaneAssociationType Lane;
+        float Speed;
+        float RelativeDistance;
+    };
 
-struct NeighborVehiclesType
-{
-};
+    struct NeighborVehiclesType
+    {
+        std::array<VehicleType, NUM_VEHICLES_ON_LANE> leftVehicles;
+        std::array<VehicleType, NUM_VEHICLES_ON_LANE> centerVehicles;
+        std::array<VehicleType, NUM_VEHICLES_ON_LANE> rightVehicles;
+    };
 
-} // namespace Types
-} // namespace Ad
+} // namespace Ad::Types
