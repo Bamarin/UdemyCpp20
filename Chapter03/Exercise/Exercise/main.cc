@@ -15,5 +15,6 @@ int main()
 
     Ad::Visualize::print_scene(ego_vehicle, vehicles);
 
+
     return 0;
 }

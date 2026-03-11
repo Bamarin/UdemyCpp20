@@ -5,10 +5,10 @@
 
 namespace Ad
 {
-namespace Constants
-{
+    namespace Constants
+    {
 
-constexpr std::int32_t EGO_VEHICLE_ID = -1;
+    constexpr std::int32_t EGO_VEHICLE_ID = -1;
 
-} // namespace Constants
+    } // namespace Constants
 } // namespace Ad
