@@ -12,15 +12,7 @@
 //     }
 // }
 
-// template<std::uint32_t N>
-// void print_container(const std::array<std::int32_t, N> &arr)
-// {
-//     for (const auto value : arr)
-//     {
-//         std::cout << value << '\n';
-//     }
-// }
-
+ 
 void print_span(std::span<std::int32_t> span)
 {
     for (const auto value : span)
